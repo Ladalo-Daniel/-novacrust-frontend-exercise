@@ -19,11 +19,6 @@ export default function Home() {
       <div className="relative z-10 text-center">
         {/* Logo */}
         <div className="flex items-center justify-center gap-3 mb-8">
-          {/* <div className="w-12 h-12 bg-nova-primary rounded-xl flex items-center justify-center">
-            <span className="text-white font-bold text-xl">N</span>
-          </div>
-          <span className="font-bold text-2xl tracking-tight">NOVACRUST</span> */}
-
            <Image src="/nova-logo.svg" alt="Novacrust Logo" width={170} height={170} />
         </div>
 

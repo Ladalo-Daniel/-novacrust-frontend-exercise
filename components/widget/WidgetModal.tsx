@@ -45,12 +45,12 @@ export function WidgetModal({ isOpen, onClose }: WidgetModalProps) {
                 stiffness: 300,
                 duration: 0.3 
               }}
-              className="relative pointer-events-auto w-full max-w-md"
+              className="relative pointer-events-auto  md:w-full max-w-md  "
             >
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="absolute -top-12 -right-16 z-10 w-9 h-9 bg-white cursor-pointer rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+                className="absolute  -top-12 -right-16 z-10 w-9 h-9 bg-white cursor-pointer rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-4 h-4 text-gray-600" />

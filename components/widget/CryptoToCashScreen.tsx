@@ -128,7 +128,7 @@ export function CryptoToCashScreen({
 
       {/* Convert Button */}
       <motion.div variants={itemVariants} className="pt-4">
-        <PrimaryButton onClick={onConvert}>Convert now</PrimaryButton>
+        <PrimaryButton onClick={onConvert} disabled={!payFrom}>Convert now</PrimaryButton>
       </motion.div>
     </motion.div>
   );

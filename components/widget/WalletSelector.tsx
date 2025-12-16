@@ -51,7 +51,7 @@ export function WalletSelector({ value, onChange, label = "Pay from" }: WalletSe
         >
           {value ? (
             <div className="flex items-center gap-3">
-              <span className="text-xl">{value.icon}</span>
+              <Image src={value.icon!} alt={value.name} width={20} height={20} />
               <span className="font-medium text-sm">{value.name}</span>
             </div>
           ) : (
@@ -73,16 +73,17 @@ export function WalletSelector({ value, onChange, label = "Pay from" }: WalletSe
               transition={{ duration: 0.15 }}
               className="absolute left-0 right-0 top-full mt-2 bg-white rounded-4xl shadow-lg border border-nova-border overflow-hidden z-50"
             >
-              <div className="max-h-64 overflow-y-auto p-3">
+              <div className="max-h-64 overflow-y-auto p-2 space-y-1">
                 {wallets.map((wallet) => (
                   <button
                     key={wallet.id}
                     onClick={() => handleSelect(wallet)}
-                    className={`w-full flex items-center  cursor-pointer rounded-2xl gap-3 px-4 py-4 text-left hover:bg-nova-gray transition-colors ${
+                    className={`w-full flex items-center  cursor-pointer rounded-2xl gap-3 px-4 py-3 text-left hover:bg-nova-gray transition-colors ${
                       value?.id === wallet.id ? "bg-nova-gray" : ""
                     }`}
                   >
-                    <span className="text-xl">{wallet.icon}</span>
+                    {/* <span className="text-xl">{wallet.icon}</span> */}
+                     <Image src={wallet.icon!} alt={wallet.name} width={20} height={20} />
                     <span className="text-sm font-medium text-nova-text" >{wallet.name}</span>
                   </button>
                 ))}

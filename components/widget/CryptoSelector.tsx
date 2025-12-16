@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Search } from "lucide-react";
 import { Cryptocurrency } from "@/lib/types";
 import { cryptocurrencies } from "@/lib/data";
+import Image from "next/image";
 
 interface CryptoSelectorProps {
   value: Cryptocurrency | null;
@@ -49,7 +50,8 @@ export function CryptoSelector({ value, onChange, label }: CryptoSelectorProps) 
       >
         {value ? (
           <>
-            <span className="text-lg">{value.icon}</span>
+            {/* <span className="text-lg">{value.icon}</span> */}
+            <Image src={value.icon!} alt={value.symbol} width={16} height={14} className="rounded-sm" />
             <span className="font-medium text-sm">{value.symbol}</span>
           </>
         ) : (
@@ -84,7 +86,7 @@ export function CryptoSelector({ value, onChange, label }: CryptoSelectorProps) 
                 />
               </div>
             </div>
-            <div className="max-h-48 overflow-y-auto px-2 space-y-1">
+            <div className="max-h-48 overflow-y-auto px-2 space-y-1 mb-4">
               {filteredCryptos.map((crypto) => (
                 <button
                   key={crypto.id}
@@ -94,10 +96,11 @@ export function CryptoSelector({ value, onChange, label }: CryptoSelectorProps) 
                   }`}
                 >
                   <span
-                    className="w-8 h-8 flex items-center justify-center rounded-full text-white text-sm"
-                    style={{ backgroundColor: crypto.color }}
+                    className=" flex items-center justify-center rounded-full text-white text-sm"
+                  
                   >
-                    {crypto.icon}
+                    {/* {crypto.icon} */}
+                    <Image src={crypto.icon!} alt={crypto.symbol} width={18} height={18} />
                   </span>
                   <span className="text-sm font-medium text-nova-text">{crypto.name}</span>
                 </button>

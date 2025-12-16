@@ -41,7 +41,7 @@ export function FiatSelector({ value, onChange }: FiatSelectorProps) {
         {value ? (
           <>
         
-            <Image src={`/naija-flag.svg`} alt={value.symbol} width={20} height={14} className="rounded-sm" />
+            <Image src={value.flag} alt={value.symbol} width={16} height={14} className="rounded-sm" />
             <span className="font-medium text-sm">{value.symbol}</span>
           </>
         ) : (
@@ -73,7 +73,7 @@ export function FiatSelector({ value, onChange }: FiatSelectorProps) {
                   }`}
                 >
                   {/* <span className="text-xl">{fiat.flag}</span> */}
-                 <Image src={`/naija-flag.svg`} alt={fiat.symbol} width={20} height={14} className="rounded-sm" />
+                 <Image src={fiat.flag} alt={fiat.symbol} width={20} height={14} className="rounded-sm" />
                   <div className="flex flex-col">
                     <span className="text-sm font-medium">{fiat.symbol}</span>
                     <span className="text-xs text-nova-text-muted">{fiat.name}</span>

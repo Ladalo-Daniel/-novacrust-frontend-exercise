@@ -234,7 +234,7 @@ export function Widget() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
-      className="w-full max-w-lg py-2 space-y-4 max-md:min-w-sm min-w-lg min-h-145 mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
+      className="md:w-full max-w-lg py-2 space-y-4 max-sm:max-w-[94%]  max-md:min-w-sm min-w-lg min-h-145 mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
     >
       {/* Tab Switch - only show on main and coming soon screens */}
       {(currentStep === "main" || currentStep === "coming-soon" || activeTab !== "crypto-to-cash") && (
